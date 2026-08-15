@@ -1,0 +1,50 @@
+name: Leet2Git
+
+on:
+  schedule:
+    # 17:30 UTC = 11:00 PM IST. Change this if your timezone/target time differs.
+    - cron: '30 17 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Leet2Git
+        run: node scripts/sync.js
+
+      - name: Check for changes
+        id: git_check
+        run: |
+          mkdir -p solutions
+          git status --porcelain solutions/ state.json
+          if [ -n "$(git status --porcelain solutions/ state.json)" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push
+        if: steps.git_check.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          mkdir -p solutions
+          git add solutions/ state.json
+          git commit -m "Leet2Git: sync new accepted submission(s)"
+          git push

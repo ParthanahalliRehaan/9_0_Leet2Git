@@ -1,0 +1,12 @@
+{
+  "name": "11_leet2git",
+  "version": "1.0.0",
+  "description": "leet2git is a lightweight tool that commit solved LeetCode problems to GitHub ` turning coding practice into visible contributions.",
+  "author": "ParthanahalliRehaan",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "node-fetch": "^3.3.2"
+  }
+}
