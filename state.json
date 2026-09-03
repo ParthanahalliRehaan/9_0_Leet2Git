@@ -1,3 +1,8 @@
 {
-  "synced_slugs": []
+  "synced_slugs": [
+    "count-negative-numbers-in-a-sorted-matrix",
+    "find-smallest-letter-greater-than-target",
+    "search-insert-position",
+    "binary-search"
+  ]
 }
