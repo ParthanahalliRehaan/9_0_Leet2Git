@@ -1,3 +1,24 @@
 {
-    "synced_slugs": []
+  "synced_slugs": [
+    "smallest-integer-divisible-by-k",
+    "ugly-number",
+    "reverse-integer",
+    "palindrome-number",
+    "find-the-pivot-integer",
+    "can-make-arithmetic-progression-from-sequence",
+    "two-sum-ii-input-array-is-sorted",
+    "max-consecutive-ones",
+    "concatenation-of-array",
+    "remove-element",
+    "remove-duplicates-from-sorted-array",
+    "merge-sorted-array",
+    "squares-of-a-sorted-array",
+    "find-the-duplicate-number",
+    "missing-number",
+    "rotate-array",
+    "vowel-consonant-score",
+    "longest-substring-without-repeating-characters",
+    "container-with-most-water",
+    "valid-palindrome"
+  ]
 }
