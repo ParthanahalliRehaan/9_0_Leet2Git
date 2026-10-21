@@ -19,6 +19,8 @@
     "vowel-consonant-score",
     "longest-substring-without-repeating-characters",
     "container-with-most-water",
-    "valid-palindrome"
+    "valid-palindrome",
+    "simple-bank-system",
+    "self-dividing-numbers"
   ]
 }
