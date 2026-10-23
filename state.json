@@ -21,6 +21,9 @@
     "container-with-most-water",
     "valid-palindrome",
     "simple-bank-system",
-    "self-dividing-numbers"
+    "self-dividing-numbers",
+    "plus-one",
+    "largest-number-at-least-twice-of-others",
+    "find-pivot-index"
   ]
 }
